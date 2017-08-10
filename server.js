@@ -30,7 +30,7 @@ var articles = {
     'article-two':  {
         title: 'Article Two | Bi',
         heading: 'Article Two',
-        date: 'Aug 10, 2017',
+        date: 'Aug 11, 2017',
         paracontent: `
             <p>
                 Para 1
@@ -40,7 +40,7 @@ var articles = {
     'article-three':  {
         title: 'Article Three | Bi',
         heading: 'Article Three',
-        date: 'Aug 10, 2017',
+        date: 'Aug 12, 2017',
         paracontent: `
             <p>
                 Para 1
