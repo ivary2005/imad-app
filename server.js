@@ -5,26 +5,48 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Bi',
-    heading: 'Article One',
-    date: 'Aug 10, 2017',
-    paracontent: `
-        <p>
-            Para 1
-            These are the lines in article one These are the lines in article one These are the lines in article one
-            These are the lines in article one These are the lines in article one These are the lines in article one
-        </p>
-        <p>
-            Para 2
-            These are the lines in article one These are the lines in article one These are the lines in article one
-            These are the lines in article one These are the lines in article one These are the lines in article one
-        </p>
-        <p>
-            Para 3
-            These are the lines in article one These are the lines in article one These are the lines in article one
-            These are the lines in article one These are the lines in article one These are the lines in article one
-        </p>`
+var articles = {
+    articleOne:  {
+        title: 'Article One | Bi',
+        heading: 'Article One',
+        date: 'Aug 10, 2017',
+        paracontent: `
+            <p>
+                Para 1
+                These are the lines in article one These are the lines in article one These are the lines in article one
+                These are the lines in article one These are the lines in article one These are the lines in article one
+            </p>
+            <p>
+                Para 2
+                These are the lines in article one These are the lines in article one These are the lines in article one
+                These are the lines in article one These are the lines in article one These are the lines in article one
+            </p>
+            <p>
+                Para 3
+                These are the lines in article one These are the lines in article one These are the lines in article one
+                These are the lines in article one These are the lines in article one These are the lines in article one
+            </p>`
+    },
+    articleTwo:  {
+        title: 'Article Two | Bi',
+        heading: 'Article Two',
+        date: 'Aug 10, 2017',
+        paracontent: `
+            <p>
+                Para 1
+                These are the lines in article two
+            </p>`
+    },
+    articleThree:  {
+        title: 'Article Three | Bi',
+        heading: 'Article Three',
+        date: 'Aug 10, 2017',
+        paracontent: `
+            <p>
+                Para 1
+                These are the lines in article three
+            </p>`
+    }
 };
 
 function createTemplate(data) {
