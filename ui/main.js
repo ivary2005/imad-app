@@ -18,3 +18,4 @@ button.onclick = function() {
     request.send(null);
 };
 
+alert('main');
