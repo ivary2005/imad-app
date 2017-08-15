@@ -1,11 +1,20 @@
 var button = document.getElementById('counter');
-var counter = 0;
 
 button.onclick = function() {
     
-    //Render the variable in the correct span
-    counter = counter + 1;
-    var span = document.getElementByID('count');
-    span.innerHTML = counter.toString();
+    var request = new XMLHTTPRequest();
+    
+    request.onreadystatechange -= function () {
+        if (request.readyState === XMLHTTPRequest.DONE) {
+            if (request.status === 200) {
+                var counter = request.responseText;
+                var span = document.getElementByID('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+    
+    request.open('GET', 'http://ivary2005.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
 
