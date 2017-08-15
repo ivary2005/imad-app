@@ -4,7 +4,6 @@ button.onclick = function() {
     
     var request = new XMLHTTPRequest();
     
-    alert('outside');
     request.onreadystatechange = function () {
         if (request.readyState === XMLHTTPRequest.DONE) {
             if (request.status === 200) {
